@@ -6,166 +6,149 @@ import java.util.concurrent.TimeUnit;
 
 public class CodigoPaginaWeb {
 
-	// FUNCIONES
-	// Funcion PING
-	public String ping(String url) {
+    // FUNCIONES
+    // Funcion PING
+    public String ping(String url) {
 
-		String info = "<html><body>";
-		String[] comandos = { "ping", url };
-		ProcessBuilder pb = new ProcessBuilder(comandos);
-		try {
-			Process p = pb.start();
-			BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
-			String lectura = "";
-			while ((lectura = br.readLine()) != null) {
-				info += "<p>" + lectura + "</p>";
-			}
-			br.close();
-		} catch (IOException ex) {
-			ex.printStackTrace();
-		}
+        String info = "<html><body>";
+        String[] comandos = {"ping", url};
+        ProcessBuilder pb = new ProcessBuilder(comandos);
+        try {
+            Process p = pb.start();
+            BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
+            String lectura = "";
+            while ((lectura = br.readLine()) != null) {
+                info += "<p>" + lectura + "</p>";
+            }
+            br.close();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
 
-		info += "</html></body>";
+        info += "</html></body>";
 
-		return info;
-	}
+        return info;
+    }
 
-	// FUNCION TRACERT MOSTRANDO NOMBRES
-	public String tracertNombre(String url) {
 
-		String info = "<html><body>";
-		String[] comandos = { "tracert", url };
-		ProcessBuilder pb = new ProcessBuilder(comandos);
-		try {
-			Process p = pb.start();
-			BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
-			String lectura = "";
-			while ((lectura = br.readLine()) != null) {
-				info += "<p>" + lectura + "</p>";
-			}
-			br.close();
-		} catch (IOException ex) {
-			ex.printStackTrace();
-		}
+    // FUNCION TRACERT MOSTRANDO NOMBRES
+    public String tracertNombre(String url) {
 
-		info += "</html></body>";
+        String info = "<html><body>";
+        String[] comandos = {"tracert", url};
+        ProcessBuilder pb = new ProcessBuilder(comandos);
+        try {
+            Process p = pb.start();
+            BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
+            String lectura = "";
+            while ((lectura = br.readLine()) != null) {
+                info += "<p>" + lectura + "</p>";
+            }
+            br.close();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
 
-		return info;
-	}
+        info += "</html></body>";
 
-	// FUNCION TRACERT SIMPLIFICADA
-	public String tracert(String url) {
+        return info;
+    }
 
-		String info = "<html><body>";
-		String[] comandos = { "tracert", "-d", url };
-		ProcessBuilder pb = new ProcessBuilder(comandos);
-		try {
-			Process p = pb.start();
-			BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
-			String lectura = "";
-			while ((lectura = br.readLine()) != null) {
-				info += "<p> " + lectura + "</p>";
-			}
-			br.close();
-		} catch (IOException ex) {
-			ex.printStackTrace();
-		}
+    // FUNCION TRACERT SIMPLIFICADA
+    public String tracert(String url) {
 
-		info += "</html></body>";
+        String info = "<html><body>";
+        String[] comandos = {"tracert", "-d", url};
+        ProcessBuilder pb = new ProcessBuilder(comandos);
+        try {
+            Process p = pb.start();
+            BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
+            String lectura = "";
+            while ((lectura = br.readLine()) != null) {
+                info += "<p> " + lectura + "</p>";
+            }
+            br.close();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
 
-		return info;
-	}
+        info += "</html></body>";
 
-	// FUNCION NsLookUp
-	public String nslookup(String url) {
+        return info;
+    }
 
-		String info = "<html><body>";
-		String[] comandos = { "nslookup", url };
-		ProcessBuilder pb = new ProcessBuilder(comandos);
-		try {
-			Process p = pb.start();
-			BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
-			String lectura = "";
-			while ((lectura = br.readLine()) != null) {
-				info += "<p> " + lectura + "</p>";
-			}
-			br.close();
-		} catch (IOException ex) {
-			ex.printStackTrace();
-		}
+    // FUNCION NsLookUp
+    public String nslookup(String url) {
 
-		info += "</html></body>";
+        String info = "<html><body>";
+        String[] comandos = {"nslookup", url};
+        ProcessBuilder pb = new ProcessBuilder(comandos);
+        try {
+            Process p = pb.start();
+            BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
+            String lectura = "";
+            while ((lectura = br.readLine()) != null) {
+                info += "<p> " + lectura + "</p>";
+            }
+            br.close();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
 
-		return info;
-	}
+        info += "</html></body>";
 
-	// FUNCION CURL
-	public String curl(String url) {
+        return info;
+    }
 
-		String info = "<html><body>";
-		String[] comandos = { "curl", url };
-		ProcessBuilder pb = new ProcessBuilder(comandos);
-		try {
-			Process p = pb.start();
-			BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
-			String lectura = "";
-			while ((lectura = br.readLine()) != null) {
-				info += "<p> " + lectura + "</p>";
-			}
-			br.close();
-		} catch (IOException ex) {
-			ex.printStackTrace();
-		}
+    // FUNCION CURL
+    public String curl(String url) {
 
-		info += "</html></body>";
+        String info = "<html><body>";
+        String[] comandos = {"curl", url};
+        ProcessBuilder pb = new ProcessBuilder(comandos);
+        try {
+            Process p = pb.start();
+            BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
+            String lectura = "";
+            while ((lectura = br.readLine()) != null) {
+                info += "<p> " + lectura + "</p>";
+            }
+            br.close();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
 
-		return info;
-	}
+        info += "</html></body>";
 
-	// FUNCION TELNET
-	public String telnet(String url) throws IOException, InterruptedException {
+        return info;
+    }
 
-		String info = "<html><body>";
-		String[] comandos = { "telnet", url, " 80" };
-		ProcessBuilder pb = new ProcessBuilder(comandos);
-		try {
-			Process p = pb.start();
+    // FUNCION TELNET
+    public String telnet(String url) throws IOException, InterruptedException {
 
-			// Tiempo de espera para meter otro comando
-			
-			p.waitFor();
-			
-			/*BufferedWriter bf = p.outputWriter(); 
-			bf.write("get /"); 
-			bf.newLine();
-			bf.flush(); 
-			p.waitFor();*/
-			 
+        String info = "<html><body>";
+        String[] comandos = {"telnet", url, " 80"};
+        ProcessBuilder pb = new ProcessBuilder(comandos);
+        try {
+            Process p = pb.start();
 
-			BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
-			String lectura = "";
-			while ((lectura = br.readLine()) != null) {
-				info += "<p> " + lectura + "</p>";
-			}
-			br.close();
+            // Tiempo de espera para meter otro comando
 
-		} catch (IOException ex) {
-			ex.printStackTrace();
-		}
+            p.waitFor();
 
-		info += "</html></body>";
+            BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
+            String lectura = "";
+            while ((lectura = br.readLine()) != null) {
+                info += "<p> " + lectura + "</p>";
+            }
+            br.close();
 
-		return info;
-	}
-	
-	
-	//FUNCIONES DE LA PESTA�A DE AYUDA
-	public String ayudaPing() {
-		String ayudaPing = "";
-		
-		
-		
-		return ayudaPing;
-	}
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
 
+        info += "</html></body>";
+
+        return info;
+    }
 }

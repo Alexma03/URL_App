@@ -45,11 +45,12 @@ public class PestanaAcercaDe extends JFrame {
 		contentPane.add(lbl_salidaAyuda);
 		setLocationRelativeTo(null);
 		lbl_salidaAyuda.setText("<html><body>"
-				+ "<p>Nombre de la app: SwingPaginaWeb</p>"
-				+ "<p>Version: 2.0</p>"
-				+ "<p>Copyright: (C) Victor Fern�ndez</p>"
-				+ "<p>Autoria: Victor Fern�ndez / Cesur</p>"
-				+ "</body></html>"); //Aqui a�adiremos el texto de la pesta�a ayuda
+				+ "<p>Nombre de la app: Interfaz</p>"
+				+ "<p>Version: 1.0</p>"
+				+ "<p>Copyright: (C) Alejandro Marcos</p>"
+				+ "<p>Autoria: Alejandro Marcos / Cesur</p>"
+				+ "</body></html>"
+		);
 		
 	}
 }

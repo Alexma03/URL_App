@@ -145,27 +145,7 @@ public class Interfaz extends JFrame {
 		JButton btnAyuda = new JButton("Ayuda");
 		btnAyuda.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				PestanaAyuda ayudaPing = new PestanaAyuda();
-				ayudaPing.setVisible(true);
-				
-				/*if (Ping.isShowing()) {
-					String ayd = "holaaa";
-
-				} else if (Tracert.isShowing()) {
-					lbl_salidaTracert.setText(paginaWeb.tracert(textoEntrada.getText()));
-					lbl_salidaTracert.setText(lbl_salidaTracert.getText() + paginaWeb.tracertNombre(textoEntrada.getText()));
-
-				} else if (Nslookup.isShowing()) {
-					lbl_salidaNslookup.setText(paginaWeb.nslookup(textoEntrada.getText()));
-
-				} else if (Curl.isShowing()) {
-					lbl_salidaCurl.setText(paginaWeb.curl(textoEntrada.getText()));
-
-				} else if (Telnet.isShowing()) {
-					lbl_salidaTelnet.setText(paginaWeb.telnet(textoEntrada.getText()));
-
-				}*/
-
+				new PestanaAyuda().PestanaAyuda();
 			}
 		});
 		btnAyuda.setFont(new Font("Tahoma", Font.BOLD, 15));
